@@ -7,4 +7,74 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Icons\CloseApp.png" />
+    <None Remove="Styles\Fonts\Unbounded-Black.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-Bold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-ExtraBold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-ExtraLight.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-Light.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-Medium.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-Regular.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-SemiBold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded-VariableFont_wght.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-Black.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-Bold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-ExtraBold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-ExtraLight.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-Light.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-Medium.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-Regular.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-SemiBold.ttf" />
+    <None Remove="Styles\Fonts\Unbounded\Unbounded-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\CloseApp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-Black.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-Bold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-ExtraBold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-ExtraLight.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-Light.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-Medium.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-SemiBold.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Styles\Fonts\Unbounded\Unbounded-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

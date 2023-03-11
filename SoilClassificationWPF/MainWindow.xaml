@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SoilClassificationWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="650" Width="1000"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        AllowsTransparency="True" MouseDown="Window_MouseDown">
 
+    <Grid Background="#161b22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="WindowControlsGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="SOILCC"
+                       Style="{StaticResource AppName}"/>
+
+            <RadioButton x:Name="CloseAppBtn" Grid.Column="2"
+                         Content="/Icons/CloseApp.png"
+                         Style="{StaticResource WindowControls}" Click="CloseAppClick"/>
+        </Grid>
+        
+        <Grid Grid.Row="1" Background="#0d1117">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            
+        </Grid>
     </Grid>
 </Window>
