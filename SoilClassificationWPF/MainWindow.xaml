@@ -9,34 +9,62 @@
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         AllowsTransparency="True" MouseDown="Window_MouseDown">
 
-    <Grid Background="#161b22">
+    <Grid Background="#0d1117">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <Grid x:Name="WindowControlsGrid">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="30"/>
-            </Grid.ColumnDefinitions>
-
-            <TextBlock Text="SOILCC"
+        <Border x:Name="WindowControlsBdr" BorderBrush="#484f58"
+                Background="#161b22">
+            <Grid x:Name="WindowControlsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="SOILCC"
                        Style="{StaticResource AppName}"/>
+                <Button x:Name="CloseBtn" Grid.Column="2" Click="CloseApp"
+                        Style="{DynamicResource WindowControlsStyle}">
+                    <Image Source="/Icons/CloseApp.png"/>
+                </Button>
+            </Grid>
+        </Border>
 
-            <RadioButton x:Name="CloseAppBtn" Grid.Column="2"
-                         Content="/Icons/CloseApp.png"
-                         Style="{StaticResource WindowControls}" Click="CloseAppClick"/>
-        </Grid>
+        <Border x:Name="MenuBdr" Grid.Row="1" BorderBrush="#161b22"
+                BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal">
+                <RadioButton x:Name="HomeBtn" Content="Главная"
+                             Style="{DynamicResource MenuBtn}"
+                             Width="90"/>
+                <RadioButton x:Name="CalculateBtn" Content="Расчёт"
+                             Style="{DynamicResource MenuBtn}"
+                             Width="90" Checked="OpenCalculatePage"/>
+                <RadioButton x:Name="HelpBtn" Content="Помощь"
+                             Style="{DynamicResource MenuBtn}"
+                             Width="90"/>
+                <RadioButton x:Name="FeedbackBtn" Content="Обратная связь"
+                             Style="{DynamicResource MenuBtn}"
+                             Width="150"/>
+            </StackPanel>
+        </Border>
         
-        <Grid Grid.Row="1" Background="#0d1117">
+        <Grid x:Name="MainGrid" Grid.Row="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="40"/>
                 <ColumnDefinition/>
+                <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
-            
-            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="ContentFrame" Grid.Column="1" Grid.Row="1">
+                
+            </Frame>
         </Grid>
     </Grid>
 </Window>

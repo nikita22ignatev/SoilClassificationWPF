@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Icons\Calculate.png" />
     <None Remove="Icons\CloseApp.png" />
     <None Remove="Styles\Fonts\Unbounded-Black.ttf" />
     <None Remove="Styles\Fonts\Unbounded-Bold.ttf" />
@@ -30,6 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Icons\Calculate.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Icons\CloseApp.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

@@ -10,16 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SoilClassificationWPF
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for FailWindow.xaml
+    /// </summary>
+    public partial class FailWindow : Window
     {
-        public MainWindow()
+        public FailWindow(string failTxt)
         {
             InitializeComponent();
+            FailTxtBlock.Text = failTxt;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -27,14 +30,10 @@ namespace SoilClassificationWPF
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
-        private void CloseApp(object sender, RoutedEventArgs e)
+
+        private void CloseWindow(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void OpenCalculatePage(object sender, RoutedEventArgs e)
-        {
-            ContentFrame.Content = new CalculatePage();
         }
     }
 }

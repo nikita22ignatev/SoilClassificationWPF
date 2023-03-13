@@ -63,6 +63,16 @@ namespace SoilClassificationWPF.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Calculate {
+            get {
+                object obj = ResourceManager.GetObject("Calculate", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] CloseApp {
             get {
                 object obj = ResourceManager.GetObject("CloseApp", resourceCulture);
