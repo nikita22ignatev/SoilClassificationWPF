@@ -20,26 +20,26 @@ namespace SoilClassification
 
         public StringBuilder ClassificationVal()
         {
-            StringBuilder outClassification = new StringBuilder();
-            outClassification = ClassificationType(typeIndex);
+            StringBuilder valClassification = new StringBuilder();
+            valClassification = ClassificationType(typeIndex);
 
             if (typeIndex != 2)
             {
-                outClassification.Append(" ");
-                outClassification.Append(ClassificationVariety(typeIndex, valDict["jl"]));
+                valClassification.Append(" ");
+                valClassification.Append(ClassificationVariety(typeIndex, valDict["jl"]));
             }
             else
             {
-                outClassification.Append(" ");
-                outClassification.Append(ClassificationSandType(valDict["fractCategory"]));
-                outClassification.Append(" ");
-                outClassification.Append(ClassificationSandDensity(valDict["e"], valDict["fractCategory"]));
+                valClassification.Append(" ");
+                valClassification.Append(ClassificationSandType(valDict["fractCategory"]));
+                valClassification.Append(" ");
+                valClassification.Append(ClassificationSandDensity(valDict["e"], valDict["fractCategory"]));
             }
 
-            outClassification.Append(" ");
-            outClassification.Append(ClassificationHumidity(valDict["sr"]));
+            valClassification.Append(" ");
+            valClassification.Append(ClassificationHumidity(valDict["sr"]));
 
-            return outClassification;
+            return valClassification;
         }
 
         private static StringBuilder ClassificationType(int typeIndex)
