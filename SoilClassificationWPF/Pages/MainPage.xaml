@@ -18,12 +18,12 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Добро пожаловать в SOILCC"
-                   Style="{StaticResource Header1}"/>
+                   Style="{StaticResource HeaderMain}"/>
 
         <TextBlock Grid.Row="1"
-                   Style="{StaticResource Txt1}">
+                   Style="{StaticResource TxtMain}">
             SOILCC (Soil Calculation and Classification) - это программа,
-            для расчёта основных значений грунта. К этоим значениям относятся:
+            для расчёта основных значений грунта. К этим значениям относятся:
             мощность слоя, число пластичности, показатель текучести,
             коэффициент пористости и степень влажности.
             На основе рассчитанных значений, определяется классификация грунта.
@@ -38,51 +38,44 @@
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
 
-            <Border Style="{StaticResource AdvantageBdr}">
+            <Border Style="{StaticResource TxtBlockBdr}">
                 <StackPanel>
-                    <TextBlock  Style="{StaticResource Header2}">
-                        Возникают трудности?
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Версия 1.0
                     </TextBlock>
-                    <TextBlock Style="{StaticResource Txt2}">
-                        В приложении есть подробная инструкция,
-                        описывающая ход работы, для более наглядного
-                        и детального представления.
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Релизная версия приложения.
                     </TextBlock>
-                    <Border Height="40">
-                        <Button Content="Помощь с расчётом"
-                            Style="{DynamicResource BtnStyle1}"/>
-                    </Border>
                 </StackPanel>
             </Border>
-            <Border Grid.Column="2" Style="{StaticResource AdvantageBdr}">
+            <Border Grid.Column="2" Style="{StaticResource TxtBlockBdr}">
                 <StackPanel>
-                    <TextBlock  Style="{StaticResource Header2}">
-                        Есть пожелания?
-                    </TextBlock>
-                    <TextBlock Style="{StaticResource Txt2}">
-                        Для развития приложения нам требуется конструктивная
-                        критика и советы по расширению функциональности.
-                    </TextBlock>
-                    <Border Height="40">
-                        <Button Content="Я хочу помочь"
-                            Style="{DynamicResource BtnStyle1}"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Border Grid.Column="4" Style="{StaticResource AdvantageBdr}">
-                <StackPanel>
-                    <TextBlock  Style="{StaticResource Header2}">
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
                         Отслеживайте в Git
                     </TextBlock>
-                    <TextBlock Style="{StaticResource Txt2}">
-                        Чтобы отслеживать изменения и
-                        работать в новейшей версии SOILCC
-                        отслеживайте наше приложение в Git.
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Чтобы работать в новейшей версии приложения,
+                        отслеживайте нас в Git.
                     </TextBlock>
-                    <Border Height="40">
+                    <Border Height="80">
                         <Button Content="Перейти в Git"
                             Style="{DynamicResource BtnStyle1}"/>
                     </Border>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="4" Style="{StaticResource TxtBlockBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Связь с нами
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Для развития приложения нам необходимо ваше мнение.
+                        Чтобы связаться с нами, оставляйте ваши предложения
+                        и пожелания на 
+                            <TextBlock Text="nikita22ignatev@gmail.com"
+                                       Style="{StaticResource EmailTxt}"/>
+                        .
+                    </TextBlock>
                 </StackPanel>
             </Border>
         </Grid>

@@ -8,10 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Icons\Calculate.png" />
     <None Remove="Icons\CloseApp.png" />
     <None Remove="Icons\Logo.png" />
-    <None Remove="Images\Advnatage1.png" />
     <None Remove="Styles\Fonts\Unbounded-Black.ttf" />
     <None Remove="Styles\Fonts\Unbounded-Bold.ttf" />
     <None Remove="Styles\Fonts\Unbounded-ExtraBold.ttf" />
@@ -87,10 +93,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>

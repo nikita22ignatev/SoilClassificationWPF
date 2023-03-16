@@ -49,10 +49,7 @@
                              Width="90" Checked="OpenCalculatePage"/>
                 <RadioButton x:Name="HelpBtn" Content="Помощь"
                              Style="{DynamicResource MenuBtn}"
-                             Width="90"/>
-                <RadioButton x:Name="FeedbackBtn" Content="Обратная связь"
-                             Style="{DynamicResource MenuBtn}"
-                             Width="150"/>
+                             Width="90" Checked="HelpPage"/>
             </StackPanel>
         </Border>
         

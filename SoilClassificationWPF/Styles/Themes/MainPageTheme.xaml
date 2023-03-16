@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style x:Key="Header1" TargetType="TextBlock">
+    <Style x:Key="HeaderMain" TargetType="TextBlock">
         <Setter Property="Foreground" Value="#f0f6fc"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
@@ -10,7 +10,7 @@
         <Setter Property="TextAlignment" Value="Center"/>
     </Style>
 
-    <Style x:Key="Txt1" TargetType="TextBlock">
+    <Style x:Key="TxtMain" TargetType="TextBlock">
         <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
@@ -21,16 +21,14 @@
         <Setter Property="LineHeight" Value="30"/>
     </Style>
 
-    <Style x:Key="AdvantageBdr" TargetType="Border">
-        <Setter Property="Width" Value="300"/>
-        <Setter Property="Height" Value="200"/>
+    <Style x:Key="TxtBlockBdr" TargetType="Border">
         <Setter Property="CornerRadius" Value="5"/>
         <Setter Property="BorderBrush" Value="#484f58"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Background" Value="#161b22"/>
     </Style>
 
-    <Style x:Key="Header2" TargetType="TextBlock">
+    <Style x:Key="TxtBlockHeader" TargetType="TextBlock">
         <Setter Property="Foreground" Value="#c8d1d9"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
@@ -41,7 +39,7 @@
         <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
-    <Style x:Key="Txt2" TargetType="TextBlock">
+    <Style x:Key="TxtBlockTxt" TargetType="TextBlock">
         <Setter Property="Foreground" Value="#8b949e"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
@@ -61,6 +59,30 @@
         <Setter Property="FontWeight" Value="ExtraLight"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Padding" Value="5"/>
+    </Style>
+
+    <Style x:Key="EmailTxt" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#186c2e"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+    </Style>
+
+    <Style x:Key="ImportantRuleTxt" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#f75249"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+    </Style>
+
+    <Style x:Key="SymbolTxt" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#79c0ff"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Medium"/>
     </Style>
 
     <!-- standart templates with changes -->

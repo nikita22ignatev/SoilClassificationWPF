@@ -44,5 +44,10 @@ namespace SoilClassificationWPF
         {
             ContentFrame.Content = new MainPage();
         }
+
+        private void HelpPage(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Content = new HelpPage();
+        }
     }
 }

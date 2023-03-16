@@ -1,0 +1,128 @@
+﻿<Page x:Class="SoilClassificationWPF.HelpPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoilClassificationWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="570" d:DesignWidth="970"
+      Title="HelpPage">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Помощь"
+                   Style="{StaticResource HeaderMain}"/>
+
+        <TextBlock Grid.Row="1"
+                   Style="{StaticResource TxtMain}">
+            Для получения корректного результата расчёта,
+            вам стоит придерживаться следующих правил:
+        </TextBlock>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Style="{StaticResource TxtBlockBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Единицы измерения
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Данные указываются 
+                        <TextBlock Text="БЕЗ"
+                                   Style="{StaticResource ImportantRuleTxt}"/> 
+                        единиц измерения.
+                        <LineBreak/>
+                        <LineBreak/>
+                        Единицы измерения по умолчанию:
+                        <LineBreak/>
+                        H - метры; P и P(s) - г/см3;
+                        W, W(l), W(p) и содержание фракций - %.
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="2" Style="{StaticResource TxtBlockBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Ввод данных
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Количество вводимых значений
+                        <TextBlock Text="РАЗЛИЧАЕТСЯ"
+                                   Style="{StaticResource ImportantRuleTxt}"/>
+                        от типа грунта.
+                        <LineBreak/>
+                        <LineBreak/>                     
+                        Для глинистых грунтов указываются все данные кроме
+                        содержания фракций, для песчаных - все кроме
+                        W(l) и W(p)                     
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="4" Style="{StaticResource TxtBlockBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Расчёт нескольких ИГЭ
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource TxtBlockTxt}">
+                        Расчёт слоёв ИГЭ производится 
+                        <TextBlock Text="ПОЭТАПНО"
+                                   Style="{StaticResource ImportantRuleTxt}"/>
+                        .
+                        <LineBreak/>
+                        <LineBreak/>
+                        Для того чтобы произвести расчёт ИГЭ-2,
+                        требуется рассчитать ИГЭ-1 и т.д.
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <TextBlock Grid.Row="3"
+                   Style="{StaticResource TxtMain}">
+            Расшифровка условных обозначений со страницы расчёта:
+        </TextBlock>
+        
+        <Border Grid.Row="4" Style="{StaticResource TxtBlockBdr}">
+            <StackPanel>
+                <TextBlock  Style="{StaticResource TxtBlockHeader}">
+                        Условные обозначения
+                </TextBlock>
+                <TextBlock Style="{StaticResource TxtBlockTxt}">
+                    <TextBlock Text="H"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - мощность слоя грунта,
+                    <TextBlock Text="P"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - плотность,
+                    <TextBlock Text="P (s)"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - плотность частиц,
+                    <TextBlock Text="W"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - влажность,
+                    <TextBlock Text="W (l)"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - влажность на границе текучести,
+                    <TextBlock Text="W (p)"
+                               Style="{StaticResource SymbolTxt}"/>
+                    - влажность на границе раскатывания.
+                </TextBlock>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
