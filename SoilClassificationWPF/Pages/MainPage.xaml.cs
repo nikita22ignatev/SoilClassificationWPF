@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,11 @@ namespace SoilClassificationWPF
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Git(object sender, RoutedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo("https://github.com/nikita22ignatev/SoilClassificationWPF") { UseShellExecute = true });
         }
     }
 }

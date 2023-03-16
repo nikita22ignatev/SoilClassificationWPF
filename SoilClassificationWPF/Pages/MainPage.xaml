@@ -59,7 +59,7 @@
                     </TextBlock>
                     <Border Height="80">
                         <Button Content="Перейти в Git"
-                            Style="{DynamicResource BtnStyle1}"/>
+                            Style="{DynamicResource BtnStyle1}" Click="Git"/>
                     </Border>
                 </StackPanel>
             </Border>
