@@ -65,7 +65,8 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
 
-            <Frame x:Name="ContentFrame" Grid.Column="1" Grid.Row="1">
+            <Frame x:Name="ContentFrame" Grid.Column="1" Grid.Row="1"
+                   NavigationUIVisibility="Hidden">
                 
             </Frame>
         </Grid>
