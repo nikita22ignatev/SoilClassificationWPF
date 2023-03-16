@@ -1,0 +1,100 @@
+﻿<Page x:Class="SoilClassificationWPF.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SoilClassificationWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="570" d:DesignWidth="970"
+      Title="MainPage">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Добро пожаловать в SOILCC"
+                   Style="{StaticResource Header1}"/>
+
+        <TextBlock Grid.Row="1"
+                   Style="{StaticResource Txt1}">
+            SOILCC (Soil Calculation and Classification) - это программа,
+            для расчёта основных значений грунта. К этоим значениям относятся:
+            мощность слоя, число пластичности, показатель текучести,
+            коэффициент пористости и степень влажности.
+            На основе рассчитанных значений, определяется классификация грунта.
+        </TextBlock>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Style="{StaticResource AdvantageBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource Header2}">
+                        Возникают трудности?
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource Txt2}">
+                        В приложении есть подробная инструкция,
+                        описывающая ход работы, для более наглядного
+                        и детального представления.
+                    </TextBlock>
+                    <Border Height="40">
+                        <Button Content="Помощь с расчётом"
+                            Style="{DynamicResource BtnStyle1}"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="2" Style="{StaticResource AdvantageBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource Header2}">
+                        Есть пожелания?
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource Txt2}">
+                        Для развития приложения нам требуется конструктивная
+                        критика и советы по расширению функциональности.
+                    </TextBlock>
+                    <Border Height="40">
+                        <Button Content="Я хочу помочь"
+                            Style="{DynamicResource BtnStyle1}"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="4" Style="{StaticResource AdvantageBdr}">
+                <StackPanel>
+                    <TextBlock  Style="{StaticResource Header2}">
+                        Отслеживайте в Git
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource Txt2}">
+                        Чтобы отслеживать изменения и
+                        работать в новейшей версии SOILCC
+                        отслеживайте наше приложение в Git.
+                    </TextBlock>
+                    <Border Height="40">
+                        <Button Content="Перейти в Git"
+                            Style="{DynamicResource BtnStyle1}"/>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="4" HorizontalAlignment="Center">
+            <Border Background="#30363d" CornerRadius="50"
+                    Width="15" Height="15">
+                <Image Source="/Icons/Logo.png" Width="10"/>
+            </Border>
+            <TextBlock Text="SOILCC - версия 1.0"
+                       Style="{StaticResource VersionName}"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -20,6 +20,9 @@ namespace SoilClassificationWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            HomeBtn.IsChecked = true;
+            ContentFrame.Content = new MainPage();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -35,6 +38,11 @@ namespace SoilClassificationWPF
         private void OpenCalculatePage(object sender, RoutedEventArgs e)
         {
             ContentFrame.Content = new CalculatePage();
+        }
+
+        private void MainPage(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Content = new MainPage();
         }
     }
 }

@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="Icons\Calculate.png" />
     <None Remove="Icons\CloseApp.png" />
+    <None Remove="Icons\Logo.png" />
+    <None Remove="Images\Advnatage1.png" />
     <None Remove="Styles\Fonts\Unbounded-Black.ttf" />
     <None Remove="Styles\Fonts\Unbounded-Bold.ttf" />
     <None Remove="Styles\Fonts\Unbounded-ExtraBold.ttf" />
@@ -28,6 +30,12 @@
     <None Remove="Styles\Fonts\Unbounded\Unbounded-Regular.ttf" />
     <None Remove="Styles\Fonts\Unbounded\Unbounded-SemiBold.ttf" />
     <None Remove="Styles\Fonts\Unbounded\Unbounded-VariableFont_wght.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -79,6 +87,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
 
 </Project>

@@ -3,68 +3,87 @@
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
 
     <Style x:Key="ValueNames" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="#6d7681"/>
+        <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
         <Setter Property="FontSize" Value="10"/>
-        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="FontWeight" Value="Light"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="Padding" Value="5,0,5,0"/>
     </Style>
 
     <Style x:Key="TxtBox1" TargetType="TextBox">
-        <Setter Property="Foreground" Value="#f0f6fc"/>
+        <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="#186c2e"/>
-        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+        <Setter Property="BorderBrush" Value="#484f58"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Width" Value="40"/>
-        <Setter Property="CaretBrush" Value="#f0f6fc"/>
+        <Setter Property="CaretBrush" Value="#484f58"/>
         <Setter Property="Padding" Value="2,5,2,5"/>
     </Style>
 
     <Style x:Key="TxtBox2" TargetType="TextBox">
-        <Setter Property="Foreground" Value="#f0f6fc"/>
+        <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="FontWeight" Value="Medium"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="#186c2e"/>
-        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+        <Setter Property="BorderBrush" Value="#484f58"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Width" Value="30"/>
-        <Setter Property="CaretBrush" Value="#f0f6fc"/>
+        <Setter Property="CaretBrush" Value="#484f58"/>
         <Setter Property="Padding" Value="2,5,2,5"/>
     </Style>
 
     <Style x:Key="ComboBox" TargetType="ComboBox">
-        <Setter Property="Foreground" Value="#f0f6fc"/>
+        <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
         <Setter Property="FontSize" Value="10"/>
         <Setter Property="FontWeight" Value="Medium"/>
-        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Width" Value="120"/>
-        <Setter Property="Padding" Value="5,5,5,5"/>
+        <Setter Property="Padding" Value="10,5,5,5"/>
+        <Setter Property="BorderBrush" Value="#484f58"/>
     </Style>
 
     <Style x:Key="OutTxt" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="#f0f6fc"/>
+        <Setter Property="Foreground" Value="#b1bac4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextElement.FontFamily" Value="/Styles/Fonts/Unbounded/#Unbounded" />
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Light"/>
-        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="TextAlignment" Value="Left"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
-        <Setter Property="Padding" Value="5,5,5,5"/>
+        <Setter Property="Padding" Value="15,5,15,5"/>
     </Style>
-    
+
+    <Style x:Key="ValueBdr" TargetType="Border">
+        <Setter Property="Background" Value="#161b22"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="ValueInputBdr" TargetType="Border">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <Style x:Key="ValueOutputBdr" TargetType="Border">
+        <Setter Property="Background" Value="#161b22"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
     <!-- standart templates with changes -->
     
     <ControlTemplate x:Key="TxtBoxTemplate" TargetType="{x:Type TextBoxBase}">
@@ -74,9 +93,6 @@
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Opacity" TargetName="border" Value="0.5"/>
-            </Trigger>
-            <Trigger Property="IsKeyboardFocused" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="#f0f6fc"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -88,15 +104,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Width="80" Background="#186c2e" Height="30" CornerRadius="5">
-                        <TextBlock Text="{TemplateBinding Property=Content}" Foreground="#f0f6fc"
-                                   TextAlignment="Center" VerticalAlignment="Center"
-                                   TextElement.FontFamily="/Styles/Fonts/Unbounded/#Unbounded"
-                                   FontWeight="Bold" FontSize="12"/>
+                    <Border Width="85" Background="#186c2e" Height="25" CornerRadius="5"
+                            Padding="5,0,5,0" BorderBrush="#f0f6fc" BorderThickness="1">
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Source="/Icons/Calculate.png" Width="15"
+                                   VerticalAlignment="Center"/>
+                            <TextBlock Text="{TemplateBinding Property=Content}" Foreground="#f0f6fc"
+                                       TextAlignment="Center" VerticalAlignment="Center"
+                                       TextElement.FontFamily="/Styles/Fonts/Unbounded/#Unbounded"
+                                       FontWeight="Light" FontSize="12"
+                                       Width="60"/>
+                        </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="0.5"/>
+                            <Setter Property="Opacity" Value="0.75"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -105,14 +127,14 @@
     </Style>
 
     <SolidColorBrush x:Key="ComboBox.Static.Background" Color="Transparent"/>
-    <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#186c2e"/>
-    <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="#186c2e"/>
+    <SolidColorBrush x:Key="ComboBox.Static.Border" Color="#484f58"/>
+    <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="#484f58"/>
     <SolidColorBrush x:Key="ComboBox.MouseOver.Background" Color="Transparent"/>
-    <SolidColorBrush x:Key="ComboBox.MouseOver.Border" Color="#186c2e" Opacity="0.5"/>
-    <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="#186c2e" Opacity="0.5"/>
-    <SolidColorBrush x:Key="ComboBox.Pressed.Border" Color="#f0f6fc"/>
-    <SolidColorBrush x:Key="ComboBox.Pressed.Glyph" Color="#f0f6fc"/>
-    <SolidColorBrush x:Key="ComboBox.Pressed.Editable.Button.Border" Color="#f0f6fc"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Border" Color="#484f58" Opacity="0.5"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="#484f58" Opacity="0.5"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Border" Color="#484f58"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Glyph" Color="#484f58"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Editable.Button.Border" Color="#484f58"/>
     <Style x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="OverridesDefaultStyle" Value="true"/>
         <Setter Property="IsTabStop" Value="false"/>
@@ -121,7 +143,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="templateRoot" Background="{StaticResource ComboBox.Static.Background}" BorderBrush="{StaticResource ComboBox.Static.Border}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                    <Border x:Name="templateRoot" Background="{StaticResource ComboBox.Static.Background}" BorderBrush="{StaticResource ComboBox.Static.Border}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="5">
                         <Border x:Name="splitBorder" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Right" Margin="0" SnapsToDevicePixels="true" Width="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}">
                             <Path x:Name="arrow" Data="F1 M 0,0 L 2.667,2.66665 L 5.3334,0 L 5.3334,-1.78168 L 2.6667,0.88501 L0,-1.78168 L0,0 Z" Fill="{StaticResource ComboBox.Static.Glyph}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
                         </Border>
@@ -194,8 +216,8 @@
             </Grid.ColumnDefinitions>
             <Popup x:Name="PART_Popup" AllowsTransparency="false" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" Placement="Bottom" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}">
                 <theme:SystemDropShadowChrome x:Name="shadow" MinWidth="{Binding ActualWidth, ElementName=templateRoot}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
-                    <Border x:Name="dropDownBorder" BorderThickness="1,1,1,2" BorderBrush="#30363d">
-                        <ScrollViewer x:Name="DropDownScrollViewer" Background="#186c2e">
+                    <Border x:Name="dropDownBorder" BorderThickness="1" BorderBrush="#484f58">
+                        <ScrollViewer x:Name="DropDownScrollViewer" Background="#161b22">
                             <Grid x:Name="grid" RenderOptions.ClearTypeHint="Enabled">
                                 <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
                                     <Rectangle x:Name="opaqueRect" Height="{Binding ActualHeight, ElementName=dropDownBorder}" Width="{Binding ActualWidth, ElementName=dropDownBorder}"/>

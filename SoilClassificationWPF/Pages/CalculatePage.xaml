@@ -25,591 +25,1014 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="110"/>
-            </Grid.ColumnDefinitions>
-            <Border x:Name="ValueNamesBdr1" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border Width="440" BorderBrush="#30363d" BorderThickness="0,0,1,0"/>
-                    <Border BorderBrush="#30363d" BorderThickness="0,1,1,0"
-                            Width="420">
-                        <TextBlock Text="Содержание фракций"
+            <StackPanel Orientation="Horizontal">
+                <Border Width="440" BorderBrush="Transparent"
+                        BorderThickness="1"/>
+                <Border Width="420" Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="Содержание фракций"
                                Style="{StaticResource ValueNames}"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            
-            <Border x:Name="ValueNamesBdr2" Grid.Row="1" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <TextBlock Text="Антопологическое описание"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="H"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="P"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="P(s)"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="W"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="W(l)"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="50">
-                        <TextBlock Text="W(p)"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="&gt; 2 мм"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="2 - 0.5"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="0.5 - 0.25"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="0.25 - 0.1"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="0.1 - 0.05"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="0.05 - 0.005"
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                    <Border BorderBrush="#30363d" BorderThickness="0,0,1,0"
-                            Width="60">
-                        <TextBlock Text="&lt; 0.005 мм" 
-                               Style="{StaticResource ValueNames}"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            
-            <!-- first -->
-            <Border x:Name="ValueInputBdr1" Grid.Row="2" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <ComboBox Template="{DynamicResource ComboBoxTemplate}" Name="Type1"
-                                  Style="{StaticResource ComboBox}">
-                            <ComboBoxItem Content="Суглинки"/>
-                            <ComboBoxItem Content="Супеси"/>
-                            <ComboBoxItem Content="Пески"/>
-                            <ComboBoxItem Content="Глины"/>
-                            <ComboBox.ItemContainerStyle>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Background" Value="#0d1117"/>
-                                    <Setter Property="Foreground" Value="#f0f6fc"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Padding" Value="7"/>
-                                </Style>
-                            </ComboBox.ItemContainerStyle>
-                        </ComboBox>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="H1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="P1"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Ps1"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="W1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wl1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wp1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_6"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract1_7"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Button x:Name="CalculateBtn1" Content="РАСЧЁТ"
-                        Style="{DynamicResource CalculateBtnStyle}"
-                        Click="CalculateFirstEge" Grid.Column="1" Grid.Row="2"/>
-            <Border x:Name="ValueOuputBdr1" Grid.Row="3" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <Border BorderBrush="#30363d" BorderThickness="1,0,1,0">
-                    <TextBlock x:Name="Out1" Style="{StaticResource OutTxt}"/>
                 </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                <Border Width="140"
+                            Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="Антопологическое описание"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="H"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="P"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="P(s)"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="W"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="W(l)"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="50"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="W(p)"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="&gt; 2 мм"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="2 ~ 0.5"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="0.5 ~ 0.25"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="0.25 ~ 0.1"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="0.1 ~ 0.05"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="0.05 ~ 0.005"
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="60"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="&lt; 0.005 мм" 
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+                <Border Width="110"
+                        Style="{StaticResource ValueBdr}">
+                    <TextBlock Text="Произвести расчёт" 
+                               Style="{StaticResource ValueNames}"/>
+                </Border>
+            </StackPanel>
+
+            <!-- first -->
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <Border Width="140" Style="{StaticResource ValueInputBdr}">
+                    <ComboBox Name="Type1" Style="{StaticResource ComboBox}"
+                              Template="{DynamicResource ComboBoxTemplate}" >
+                        <ComboBoxItem Content="Суглинки"/>
+                        <ComboBoxItem Content="Супеси"/>
+                        <ComboBoxItem Content="Пески"/>
+                        <ComboBoxItem Content="Глины"/>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="#0d1117"/>
+                                <Setter Property="BorderBrush" Value="#b1bac4"/>
+                                <Setter Property="BorderThickness" Value="0,0.5,0,0.5"/>
+                                <Setter Property="Padding" Value="7"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="H1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="P1"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Ps1"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="W1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wl1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wp1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_6"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract1_7"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="110" Style="{StaticResource ValueInputBdr}">
+                    <Button x:Name="CalculateBtn1" Content="Расчёт"
+                        Click="CalculateFirstEge"
+                        Style="{DynamicResource CalculateBtnStyle}"/>
+                </Border>
+            </StackPanel>
+            <Border Grid.Row="3" Style="{StaticResource ValueOutputBdr}">
+                <TextBlock x:Name="Out1" Style="{StaticResource OutTxt}"/>
             </Border>
 
             <!-- second -->
-            <Border x:Name="ValueInputBdr2" Grid.Row="4" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <ComboBox Template="{DynamicResource ComboBoxTemplate}" Name="Type2"
-                                  Style="{StaticResource ComboBox}" IsEnabled="False">
-                            <ComboBoxItem Content="Суглинки"/>
-                            <ComboBoxItem Content="Супеси"/>
-                            <ComboBoxItem Content="Пески"/>
-                            <ComboBoxItem Content="Глины"/>
-                            <ComboBox.ItemContainerStyle>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Background" Value="#0d1117"/>
-                                    <Setter Property="Foreground" Value="#f0f6fc"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Padding" Value="7"/>
-                                </Style>
-                            </ComboBox.ItemContainerStyle>
-                        </ComboBox>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="H2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="P2"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Ps2"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="W2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wl2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wp2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_6"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract2_7"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Button x:Name="CalculateBtn2" Content="РАСЧЁТ"
-                    Style="{DynamicResource CalculateBtnStyle}"
-                    Grid.Column="1" Grid.Row="4" IsEnabled="False" Click="CalculateSecondEge"/>
-            <Border x:Name="ValueOuputBdr2" Grid.Row="5" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <Border BorderBrush="#30363d" BorderThickness="1,0,1,0">
-                    <TextBlock x:Name="Out2" Style="{StaticResource OutTxt}"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+                <Border Width="140" Style="{StaticResource ValueInputBdr}">
+                    <ComboBox Name="Type2"
+                              Style="{StaticResource ComboBox}"
+                              IsEnabled="False"
+                              Template="{DynamicResource ComboBoxTemplate}">
+                        <ComboBoxItem Content="Суглинки"/>
+                        <ComboBoxItem Content="Супеси"/>
+                        <ComboBoxItem Content="Пески"/>
+                        <ComboBoxItem Content="Глины"/>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="#0d1117"/>
+                                <Setter Property="Foreground" Value="#f0f6fc"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="7"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
                 </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="H2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="P2"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Ps2"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="W2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wl2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wp2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_6"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract2_7"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="110" Style="{StaticResource ValueInputBdr}">
+                    <Button x:Name="CalculateBtn2" Content="Расчёт"
+                    Grid.Column="1" Grid.Row="4" IsEnabled="False"
+                    Click="CalculateSecondEge"
+                    Style="{DynamicResource CalculateBtnStyle}"/>
+                </Border>
+            </StackPanel>
+            <Border Grid.Row="5" Style="{StaticResource ValueOutputBdr}">
+                <TextBlock x:Name="Out2" Style="{StaticResource OutTxt}"/>
             </Border>
-                
+
             <!-- third -->
-            <Border x:Name="ValueInputBdr3" Grid.Row="6" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <ComboBox Template="{DynamicResource ComboBoxTemplate}" Name="Type3"
-                                  Style="{StaticResource ComboBox}" IsEnabled="False">
-                            <ComboBoxItem Content="Суглинки"/>
-                            <ComboBoxItem Content="Супеси"/>
-                            <ComboBoxItem Content="Пески"/>
-                            <ComboBoxItem Content="Глины"/>
-                            <ComboBox.ItemContainerStyle>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Background" Value="#0d1117"/>
-                                    <Setter Property="Foreground" Value="#f0f6fc"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Padding" Value="7"/>
-                                </Style>
-                            </ComboBox.ItemContainerStyle>
-                        </ComboBox>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="H3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="P3"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Ps3"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="W3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wl3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wp3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_6"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract3_7"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Button x:Name="CalculateBtn3" Content="РАСЧЁТ"
-                    Style="{DynamicResource CalculateBtnStyle}"
-                    Grid.Column="1" Grid.Row="6" IsEnabled="False" Click="CalculateThirdEge"/>
-            <Border x:Name="ValueOuputBdr3" Grid.Row="7" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <Border BorderBrush="#30363d" BorderThickness="1,0,1,0">
-                    <TextBlock x:Name="Out3" Style="{StaticResource OutTxt}"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="6">
+                <Border Width="140" Style="{StaticResource ValueInputBdr}">
+                    <ComboBox Name="Type3"
+                              Style="{StaticResource ComboBox}"
+                              IsEnabled="False"
+                              Template="{DynamicResource ComboBoxTemplate}">
+                        <ComboBoxItem Content="Суглинки"/>
+                        <ComboBoxItem Content="Супеси"/>
+                        <ComboBoxItem Content="Пески"/>
+                        <ComboBoxItem Content="Глины"/>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="#0d1117"/>
+                                <Setter Property="Foreground" Value="#f0f6fc"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="7"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
                 </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="H3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="P3"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Ps3"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="W3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wl3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wp3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_6"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract3_7"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="110" Style="{StaticResource ValueInputBdr}">
+                    <Button x:Name="CalculateBtn3" Content="Расчёт"
+                    Grid.Column="1" Grid.Row="6" IsEnabled="False"
+                    Click="CalculateThirdEge"
+                    Style="{DynamicResource CalculateBtnStyle}"/>
+                </Border>
+            </StackPanel>
+            <Border Grid.Row="7" Style="{StaticResource ValueOutputBdr}">
+                <TextBlock x:Name="Out3" Style="{StaticResource OutTxt}"/>
             </Border>
 
             <!-- fourth -->
-            <Border x:Name="ValueInputBdr4" Grid.Row="8" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <ComboBox Template="{DynamicResource ComboBoxTemplate}" Name="Type4"
-                                  Style="{StaticResource ComboBox}" IsEnabled="False">
-                            <ComboBoxItem Content="Суглинки"/>
-                            <ComboBoxItem Content="Супеси"/>
-                            <ComboBoxItem Content="Пески"/>
-                            <ComboBoxItem Content="Глины"/>
-                            <ComboBox.ItemContainerStyle>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Background" Value="#0d1117"/>
-                                    <Setter Property="Foreground" Value="#f0f6fc"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Padding" Value="7"/>
-                                </Style>
-                            </ComboBox.ItemContainerStyle>
-                        </ComboBox>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="H4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="P4"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Ps4"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="W4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wl4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wp4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_6"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract4_7"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Button x:Name="CalculateBtn4" Content="РАСЧЁТ"
-                    Style="{DynamicResource CalculateBtnStyle}"
-                    Grid.Column="1" Grid.Row="8" IsEnabled="False" Click="CalculateFourthEge"/>
-            <Border x:Name="ValueOuputBdr4" Grid.Row="9" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <Border BorderBrush="#30363d" BorderThickness="1,0,1,0">
-                    <TextBlock x:Name="Out4" Style="{StaticResource OutTxt}"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="8">
+                <Border Width="140" Style="{StaticResource ValueInputBdr}">
+                    <ComboBox Name="Type4"
+                              Style="{StaticResource ComboBox}"
+                              IsEnabled="False"
+                              Template="{DynamicResource ComboBoxTemplate}">
+                        <ComboBoxItem Content="Суглинки"/>
+                        <ComboBoxItem Content="Супеси"/>
+                        <ComboBoxItem Content="Пески"/>
+                        <ComboBoxItem Content="Глины"/>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="#0d1117"/>
+                                <Setter Property="Foreground" Value="#f0f6fc"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="7"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
                 </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="H4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="P4"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Ps4"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="W4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wl4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wp4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_6"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract4_7"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="110" Style="{StaticResource ValueInputBdr}">
+                    <Button x:Name="CalculateBtn4" Content="Расчёт"
+                    Grid.Column="1" Grid.Row="8" IsEnabled="False"
+                    Click="CalculateFourthEge"
+                    Style="{DynamicResource CalculateBtnStyle}"/>
+                </Border>
+            </StackPanel>
+            <Border Grid.Row="9" Style="{StaticResource ValueOutputBdr}">
+                <TextBlock x:Name="Out4" Style="{StaticResource OutTxt}"/>
             </Border>
 
             <!-- fifth -->
-            <Border x:Name="ValueInputBdr5" Grid.Row="10" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <StackPanel Orientation="Horizontal">
-                    <Border BorderBrush="#30363d" BorderThickness="1,0,1,0"
-                            Width="140">
-                        <ComboBox Template="{DynamicResource ComboBoxTemplate}" Name="Type5"
-                                  Style="{StaticResource ComboBox}" IsEnabled="False">
-                            <ComboBoxItem Content="Суглинки"/>
-                            <ComboBoxItem Content="Супеси"/>
-                            <ComboBoxItem Content="Пески"/>
-                            <ComboBoxItem Content="Глины"/>
-                            <ComboBox.ItemContainerStyle>
-                                <Style TargetType="ComboBoxItem">
-                                    <Setter Property="Background" Value="#0d1117"/>
-                                    <Setter Property="Foreground" Value="#f0f6fc"/>
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Padding" Value="7"/>
-                                </Style>
-                            </ComboBox.ItemContainerStyle>
-                        </ComboBox>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="H5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="P5"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Ps5"
-                                 Style="{StaticResource TxtBox1}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="W5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wl5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="50" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Wp5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_1"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_2"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_3"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_4"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_5"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_6"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                    <Border Width="60" BorderBrush="#30363d" BorderThickness="0,0,1,0">
-                        <TextBox x:Name="Fract5_7"
-                                 Style="{StaticResource TxtBox2}"
-                                 Template="{DynamicResource TxtBoxTemplate}" IsEnabled="False"/>
-                    </Border>
-                </StackPanel>
-            </Border>
-            <Button x:Name="CalculateBtn5" Content="РАСЧЁТ"
-                    Style="{DynamicResource CalculateBtnStyle}"
-                    Grid.Column="1" Grid.Row="10" IsEnabled="False" Click="CalculateFifthEge"/>
-            <Border x:Name="ValueOuputBdr5" Grid.Row="11" BorderBrush="#30363d"
-                BorderThickness="0,0,0,1">
-                <Border BorderBrush="#30363d" BorderThickness="1,0,1,0">
-                    <TextBlock x:Name="Out5" Style="{StaticResource OutTxt}"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="10">
+                <Border Width="140" Style="{StaticResource ValueInputBdr}">
+                    <ComboBox Name="Type5"
+                              Style="{StaticResource ComboBox}"
+                              IsEnabled="False"
+                              Template="{DynamicResource ComboBoxTemplate}">
+                        <ComboBoxItem Content="Суглинки"/>
+                        <ComboBoxItem Content="Супеси"/>
+                        <ComboBoxItem Content="Пески"/>
+                        <ComboBoxItem Content="Глины"/>
+                        <ComboBox.ItemContainerStyle>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Background" Value="#0d1117"/>
+                                <Setter Property="Foreground" Value="#f0f6fc"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="7"/>
+                            </Style>
+                        </ComboBox.ItemContainerStyle>
+                    </ComboBox>
                 </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="H5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="P5"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Ps5"
+                             Style="{StaticResource TxtBox1}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="W5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wl5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="50" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Wp5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_1"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_2"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_3"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_4"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_5"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_6"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="60" Style="{StaticResource ValueInputBdr}">
+                    <TextBox x:Name="Fract5_7"
+                             Style="{StaticResource TxtBox2}"
+                             Template="{DynamicResource TxtBoxTemplate}"
+                             IsEnabled="False">
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </Border>
+                <Border Width="110" Style="{StaticResource ValueInputBdr}">
+                    <Button x:Name="CalculateBtn5" Content="Расчёт"
+                    Grid.Column="1" Grid.Row="10" IsEnabled="False"
+                    Click="CalculateFifthEge"
+                    Style="{DynamicResource CalculateBtnStyle}"/>
+                </Border>
+            </StackPanel>
+            <Border Grid.Row="11" Style="{StaticResource ValueOutputBdr}">
+                <TextBlock x:Name="Out5" Style="{StaticResource OutTxt}"/>
             </Border>
         </Grid>
     </Border>

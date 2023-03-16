@@ -48,19 +48,16 @@ namespace SoilClassificationWPF
                         Double.TryParse(Wp1.Text, out wp))
                     {
                         Calculation firstEge = new Calculation(Type1.SelectedIndex, h, 0, p, ps, w, wl, wp);
-
                         var firstEgeDict = new Dictionary<string, double>();
                         firstEgeDict = firstEge.CalculationVal();
 
                         Classification firstEgeClass = new Classification(Type1.SelectedIndex, firstEgeDict);
-
                         StringBuilder firstEgeOut = new StringBuilder();
                         firstEgeOut = firstEgeClass.ClassificationVal();
                         firstEgeOut.Append(".  ");
                         firstEgeOut.Append(GenerationOut(Type1.SelectedIndex, firstEgeDict));
 
                         Out1.Text = Convert.ToString(firstEgeOut);
-
                         UnlockInputSecondEge();
                     }
                     else
@@ -86,19 +83,16 @@ namespace SoilClassificationWPF
                         int.TryParse(Fract1_7.Text, out fract[6]))
                     {
                         Calculation firstEge = new Calculation(Type1.SelectedIndex, h, 0, p, ps, w, fract);
-
                         var firstEgeDict = new Dictionary<string, double>();
                         firstEgeDict = firstEge.CalculationVal();
 
                         Classification firstEgeClass = new Classification(Type1.SelectedIndex, firstEgeDict);
-
                         StringBuilder firstEgeOut = new StringBuilder();
                         firstEgeOut = firstEgeClass.ClassificationVal();
                         firstEgeOut.Append(".  ");
                         firstEgeOut.Append(GenerationOut(Type1.SelectedIndex, firstEgeDict));
 
                         Out1.Text = Convert.ToString(firstEgeOut);
-
                         UnlockInputSecondEge();
                     }
                     else
@@ -137,19 +131,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2;
 
                         Calculation secondEge = new Calculation(Type2.SelectedIndex, h, hPrev, p, ps, w, wl, wp);
-
                         var secondEgeDict = new Dictionary<string, double>();
                         secondEgeDict = secondEge.CalculationVal();
 
                         Classification secondEgeClass = new Classification(Type2.SelectedIndex, secondEgeDict);
-
                         StringBuilder secondEgeOut = new StringBuilder();
                         secondEgeOut = secondEgeClass.ClassificationVal();
                         secondEgeOut.Append(".  ");
                         secondEgeOut.Append(GenerationOut(Type2.SelectedIndex, secondEgeDict));
 
                         Out2.Text = Convert.ToString(secondEgeOut);
-
                         UnlockInputThirdEge();
                     }
                     else
@@ -177,19 +168,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2;
 
                         Calculation secondEge = new Calculation(Type2.SelectedIndex, h, hPrev, p, ps, w, fract);
-
                         var secondEgeDict = new Dictionary<string, double>();
                         secondEgeDict = secondEge.CalculationVal();
 
                         Classification secondEgeClass = new Classification(Type2.SelectedIndex, secondEgeDict);
-
                         StringBuilder secondEgeOut = new StringBuilder();
                         secondEgeOut = secondEgeClass.ClassificationVal();
                         secondEgeOut.Append(".  ");
                         secondEgeOut.Append(GenerationOut(Type2.SelectedIndex, secondEgeDict));
 
                         Out2.Text = Convert.ToString(secondEgeOut);
-
                         UnlockInputThirdEge();
                     }
                     else
@@ -228,19 +216,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2;
 
                         Calculation thirdEge = new Calculation(Type3.SelectedIndex, h, hPrev, p, ps, w, wl, wp);
-
                         var thirdEgeDict = new Dictionary<string, double>();
                         thirdEgeDict = thirdEge.CalculationVal();
 
                         Classification thirdEgeClass = new Classification(Type3.SelectedIndex, thirdEgeDict);
-
                         StringBuilder thirdEgeOut = new StringBuilder();
                         thirdEgeOut = thirdEgeClass.ClassificationVal();
                         thirdEgeOut.Append(".  ");
                         thirdEgeOut.Append(GenerationOut(Type3.SelectedIndex, thirdEgeDict));
 
                         Out3.Text = Convert.ToString(thirdEgeOut);
-
                         UnlockInputFourthEge();
                     }
                     else
@@ -268,19 +253,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2;
 
                         Calculation thirdEge = new Calculation(Type3.SelectedIndex, h, hPrev, p, ps, w, fract);
-
                         var thirdEgeDict = new Dictionary<string, double>();
                         thirdEgeDict = thirdEge.CalculationVal();
 
                         Classification thirdEgeClass = new Classification(Type3.SelectedIndex, thirdEgeDict);
-
                         StringBuilder thirdEgeOut = new StringBuilder();
                         thirdEgeOut = thirdEgeClass.ClassificationVal();
                         thirdEgeOut.Append(".  ");
                         thirdEgeOut.Append(GenerationOut(Type3.SelectedIndex, thirdEgeDict));
 
                         Out3.Text = Convert.ToString(thirdEgeOut);
-
                         UnlockInputFourthEge();
                     }
                     else
@@ -319,19 +301,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2 + Convert.ToDouble(H3.Text) / 2;
 
                         Calculation fourthEge = new Calculation(Type4.SelectedIndex, h, hPrev, p, ps, w, wl, wp);
-
                         var fourthEgeDict = new Dictionary<string, double>();
                         fourthEgeDict = fourthEge.CalculationVal();
 
                         Classification fourthEgeClass = new Classification(Type4.SelectedIndex, fourthEgeDict);
-
                         StringBuilder fourthEgeOut = new StringBuilder();
                         fourthEgeOut = fourthEgeClass.ClassificationVal();
                         fourthEgeOut.Append(".  ");
                         fourthEgeOut.Append(GenerationOut(Type4.SelectedIndex, fourthEgeDict));
 
                         Out4.Text = Convert.ToString(fourthEgeOut);
-
                         UnlockInputFifthEge();
                     }
                     else
@@ -359,19 +338,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2 + Convert.ToDouble(H3.Text) / 2;
 
                         Calculation fourthEge = new Calculation(Type4.SelectedIndex, h, hPrev, p, ps, w, fract);
-
                         var fourthEgeDict = new Dictionary<string, double>();
                         fourthEgeDict = fourthEge.CalculationVal();
 
                         Classification fourthEgeClass = new Classification(Type4.SelectedIndex, fourthEgeDict);
-
                         StringBuilder fourthEgeOut = new StringBuilder();
                         fourthEgeOut = fourthEgeClass.ClassificationVal();
                         fourthEgeOut.Append(".  ");
                         fourthEgeOut.Append(GenerationOut(Type4.SelectedIndex, fourthEgeDict));
 
                         Out4.Text = Convert.ToString(fourthEgeOut);
-
                         UnlockInputFifthEge();
                     }
                     else
@@ -410,18 +386,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2 + Convert.ToDouble(H3.Text) / 2 + Convert.ToDouble(H4.Text) / 2;
 
                         Calculation fifthEge = new Calculation(Type5.SelectedIndex, h, hPrev, p, ps, w, wl, wp);
-
                         var fifthEgeDict = new Dictionary<string, double>();
                         fifthEgeDict = fifthEge.CalculationVal();
 
                         Classification fifthEgeClass = new Classification(Type5.SelectedIndex, fifthEgeDict);
-
                         StringBuilder fifthEgeOut = new StringBuilder();
                         fifthEgeOut = fifthEgeClass.ClassificationVal();
                         fifthEgeOut.Append(".  ");
                         fifthEgeOut.Append(GenerationOut(Type5.SelectedIndex, fifthEgeDict));
 
-                        Out4.Text = Convert.ToString(fifthEgeOut);
+                        Out5.Text = Convert.ToString(fifthEgeOut);
                     }
                     else
                     {
@@ -448,19 +422,16 @@ namespace SoilClassificationWPF
                         double hPrev = Convert.ToDouble(H1.Text) / 2 + Convert.ToDouble(H2.Text) / 2 + Convert.ToDouble(H3.Text) / 2 + Convert.ToDouble(H4.Text) / 2;
 
                         Calculation fifthEge = new Calculation(Type5.SelectedIndex, h, hPrev, p, ps, w, fract);
-
                         var fifthEgeDict = new Dictionary<string, double>();
                         fifthEgeDict = fifthEge.CalculationVal();
 
                         Classification fifthEgeClass = new Classification(Type5.SelectedIndex, fifthEgeDict);
-
                         StringBuilder fifthEgeOut = new StringBuilder();
                         fifthEgeOut = fifthEgeClass.ClassificationVal();
                         fifthEgeOut.Append(".  ");
                         fifthEgeOut.Append(GenerationOut(Type5.SelectedIndex, fifthEgeDict));
 
-                        Out4.Text = Convert.ToString(fifthEgeOut);
-
+                        Out5.Text = Convert.ToString(fifthEgeOut);
                     }
                     else
                     {
@@ -493,7 +464,7 @@ namespace SoilClassificationWPF
                 egeOut.Append(valDict["sr"]);
                 egeOut.Append(",  R(0): ");
                 egeOut.Append(valDict["r0"]);
-                egeOut.Append(" кПа");
+                egeOut.Append(" кПа.");
             }
             else
             {
@@ -506,7 +477,7 @@ namespace SoilClassificationWPF
                 egeOut.Append(valDict["sr"]);
                 egeOut.Append(",  R(0): ");
                 egeOut.Append(valDict["r0"]);
-                egeOut.Append(" кПа");
+                egeOut.Append(" кПа.");
             }
 
             return egeOut;

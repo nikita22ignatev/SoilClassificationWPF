@@ -19,13 +19,19 @@
                 Background="#161b22">
             <Grid x:Name="WindowControlsGrid">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="60"/>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="30"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="SOILCC"
+                <Border Background="#f0f6fc" CornerRadius="50"
+                        Width="15" Height="15">
+                    <Image Source="/Icons/Logo.png"
+                           Width="12"/>
+                </Border>
+                <TextBlock Text="SOILCC" Grid.Column="1"
                        Style="{StaticResource AppName}"/>
-                <Button x:Name="CloseBtn" Grid.Column="2" Click="CloseApp"
+                <Button x:Name="CloseBtn" Grid.Column="3" Click="CloseApp"
                         Style="{DynamicResource WindowControlsStyle}">
                     <Image Source="/Icons/CloseApp.png"/>
                 </Button>
@@ -37,7 +43,7 @@
             <StackPanel Orientation="Horizontal">
                 <RadioButton x:Name="HomeBtn" Content="Главная"
                              Style="{DynamicResource MenuBtn}"
-                             Width="90"/>
+                             Width="90" Checked="MainPage"/>
                 <RadioButton x:Name="CalculateBtn" Content="Расчёт"
                              Style="{DynamicResource MenuBtn}"
                              Width="90" Checked="OpenCalculatePage"/>
