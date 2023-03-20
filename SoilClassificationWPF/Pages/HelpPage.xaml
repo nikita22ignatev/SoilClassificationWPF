@@ -35,7 +35,6 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-
             <Border Style="{StaticResource TxtBlockBdr}">
                 <StackPanel>
                     <TextBlock  Style="{StaticResource TxtBlockHeader}">
@@ -94,7 +93,7 @@
 
         <TextBlock Grid.Row="3"
                    Style="{StaticResource TxtMain}">
-            Расшифровка условных обозначений со страницы расчёта:
+            Расшифровка обозначений со страницы расчёта:
         </TextBlock>
         
         <Border Grid.Row="4" Style="{StaticResource TxtBlockBdr}">

@@ -25,6 +25,8 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            
+            <!-- value names -->
             <StackPanel Orientation="Horizontal">
                 <Border Width="440" BorderBrush="Transparent"
                         BorderThickness="1"/>

@@ -22,7 +22,7 @@
 
         <TextBlock Grid.Row="1"
                    Style="{StaticResource TxtMain}">
-            SOILCC (Soil Calculation and Classification) - это программа,
+            SOILCC (Soil Calculation and Classification) - это приложение,
             для расчёта основных значений грунта. К этим значениям относятся:
             мощность слоя, число пластичности, показатель текучести,
             коэффициент пористости и степень влажности.
@@ -37,7 +37,6 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-
             <Border Style="{StaticResource TxtBlockBdr}">
                 <StackPanel>
                     <TextBlock  Style="{StaticResource TxtBlockHeader}">
